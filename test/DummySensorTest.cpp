@@ -15,10 +15,17 @@
 
 TEST_CASE("test if DummySensor returns a value between 0 and 49") {
     Sensor Sensor1;
-    int minValue = 0;
-    int maxValue = 50;
-    string name = "Temperatur";
-    Sensor1.setSensorType(new DummySensor(minValue, maxValue, name));
+    int minValue, maxValue;
+    string name, dataSource;
+
+    SECTION("Test for temperature sensor") {
+        minValue = 0;
+        maxValue = 50;
+        name = "Temperatur";
+        dataSource = "Sensor";
+    }
+
+    Sensor1.setSensorType(new DummySensor(minValue, maxValue, name, dataSource));
     std::cout << "created temperature sensor " << endl;
     DataBuffer result = Sensor1.readSensor();
     std::cout << "DummySensor.read == " << result << endl;

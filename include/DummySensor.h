@@ -31,7 +31,9 @@ using namespace std;
 class DummySensor : public SensorType {
     public:
         /* --- constructor --- */
-        DummySensor(int minValue_, int maxValue_, string name_) : minValue(minValue_), maxValue(maxValue_), name(name_) {};
+        DummySensor(int minValue_, int maxValue_, string name_, string dataSource_) :
+            minValue(minValue_), maxValue(maxValue_),
+            name(name_), dataSource(dataSource_) {};
 
         /* --- measuring --- */
         DataBuffer readSensor();
@@ -40,6 +42,7 @@ class DummySensor : public SensorType {
         int maxValue;
         int minValue;
         string name;
+        string dataSource
 };
 
 #endif // DummySensor_H
