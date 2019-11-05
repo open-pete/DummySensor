@@ -15,10 +15,10 @@ DEFINES += QT_DEPRECATED_WARNINGS
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
-        main.cpp \
         src/DataBuffer.cpp \
         src/DummySensor.cpp \
-        src/Sensor.cpp
+        src/Sensor.cpp \
+        test/DummySensorTest.cpp
 
 INCLUDEPATH += include/
 
@@ -32,4 +32,5 @@ HEADERS += \
     include/DataBuffer.h \
     include/DummySensor.h \
     include/Sensor.h \
-    include/SensorType.h
+    include/SensorType.h \
+    test/catch.hpp

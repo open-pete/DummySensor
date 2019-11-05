@@ -21,7 +21,7 @@ DataBuffer DummySensor::readSensor() {
     result.dataSource = "WeatherStation";
     result.useDataSource = true;
 
-    result.data["Lufttemperatur_2m"] = rand() % 50;
+    result.data[name] = (rand() % (maxValue+1)) + minValue;
 
     return result;
 }
