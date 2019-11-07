@@ -30,7 +30,7 @@ script:
   - /opt/qt55/bin/qmake
   - make clean
   - make
-  - ./DummyTest
+  - ./DummySensor
 
 after_success:
   - coveralls --exclude lib --exclude tests --gcov-options '\-lp' --exclude test/catch.hpp
