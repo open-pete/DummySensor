@@ -3,6 +3,7 @@
  * Purpose: defines class Sensor
  *
  * @author mezorian
+ * @version 1.0.0
  */
 
 #ifndef SENSOR_H

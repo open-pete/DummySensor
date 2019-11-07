@@ -3,6 +3,7 @@
  * Purpose: implements class Sensor
  *
  * @author mezorian
+ * @version 1.0.0
  */
 
 #include "Sensor.h"

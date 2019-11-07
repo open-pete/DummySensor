@@ -3,6 +3,7 @@
  * Purpose: defines interface SensorType
  *
  * @author mezorian
+ * @version 1.0.0
  */
 
 #ifndef SENSORTYPE_H

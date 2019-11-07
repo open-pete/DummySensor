@@ -3,6 +3,7 @@
  * Purpose: implements class DummySensor
  *
  * @author mezorian
+ * @version 1.0.0
  */
 
 #include "DummySensor.h"

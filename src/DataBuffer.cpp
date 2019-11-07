@@ -3,6 +3,7 @@
  * Purpose: implements struct DataBuffer and DataBufferProperties
  *
  * @author mezorian
+ * @version 1.0.0
  */
 
 #include "DataBuffer.h"

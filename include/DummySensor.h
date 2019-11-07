@@ -3,6 +3,7 @@
  * Purpose: defines class DummySensor
  *
  * @author mezorian
+ * @version 1.0.0
  */
 
 
