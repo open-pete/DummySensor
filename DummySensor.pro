@@ -15,12 +15,21 @@ DEFINES += QT_DEPRECATED_WARNINGS
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
+        mezorian/DateTimePP/src/DateTimePP.cpp \
+        mezorian/DateTimePP/src/DateTimePPArithmetics.cpp \
+        mezorian/DateTimePP/src/DateTimePPCurrentTime.cpp \
+        mezorian/DateTimePP/src/DateTimePPDateTimeInfo.cpp \
+        mezorian/DateTimePP/src/DateTimePPGeneralMisc.cpp \
+        mezorian/DateTimePP/src/DateTimePPOperator.cpp \
+        mezorian/DateTimePP/src/DateTimePPUnixTime.cpp \
         src/DataBuffer.cpp \
         src/DummySensor.cpp \
         src/Sensor.cpp \
         test/DummySensorTest.cpp
 
-INCLUDEPATH += include/
+INCLUDEPATH += include/ \
+               mezorian/DateTimePP/include/
+
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
@@ -32,4 +41,5 @@ HEADERS += \
     include/DummySensor.h \
     include/Sensor.h \
     include/SensorType.h \
+    mezorian/DateTimePP/include/DateTimePP.h \
     test/catch.hpp
