@@ -42,7 +42,7 @@ class DummySensor : public SensorType {
         int maxValue;
         int minValue;
         string name;
-        string dataSource
+        string dataSource;
 };
 
 #endif // DummySensor_H
