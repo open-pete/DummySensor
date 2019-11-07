@@ -15,7 +15,7 @@ install:
   - sudo dpkg -i influxdb_1.7.7_amd64.deb
 
 script:
-  - sudo service influxdb start
+  - echo "TODO sudo service influxdb start"
   - sudo service influxdb status
   - echo "clone dependency repos"
   - repoURL="https://github.com/${TRAVIS_REPO_SLUG}.git"

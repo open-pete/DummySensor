@@ -56,6 +56,9 @@ TEST_CASE("test if DummySensor returns a value between 0 and 49") {
         std::cout << "DummySensor.read == " << result << endl;
         REQUIRE(result.data[name] >= (double) minValue);
         REQUIRE(result.data[name] <= (double) maxValue);
+        DateTimePP dt;
+        dt.now(true);
+        REQUIRE(result.startDateTime == dt.now(true));
     }
 
 }

@@ -26,7 +26,8 @@
 class Sensor {
     public:
         /* --- constructor --- */
-        Sensor() {};
+        Sensor(bool setDateTimeDuringReadSensor_ = true) :
+            setDateTimeDuringReadSensor(setDateTimeDuringReadSensor_) {};
 
         /* --- getter and setter --- */
         void setSensorType(SensorType *val_) { sensorType = val_; };
@@ -37,6 +38,7 @@ class Sensor {
 
     private:
         SensorType *sensorType;
+        bool setDateTimeDuringReadSensor;
 };
 
 #endif // SENSOR_H
