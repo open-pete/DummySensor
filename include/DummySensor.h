@@ -19,7 +19,6 @@ using namespace std;
 // --- TODO -- dummy code ---
 
 #include "SensorType.h"
-#include "Config.h"
 
 /**
  * DummySensor class

@@ -28,7 +28,6 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
 
 HEADERS += \
-    include/Config.h \
     include/DataBuffer.h \
     include/DummySensor.h \
     include/Sensor.h \

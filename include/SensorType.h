@@ -12,7 +12,7 @@
 
 /**
  * SensorType class
- * @brief The SensorType class is an interface which outsources the readSensor-function from Sensor-Class
+ * @brief The SensorType class is an interface which outsources the readSensor-function from Sensor-class
  *
  * The design of the SensorType-class is based on the design pattern 'strategy'.
  * In respect of this the SensorType-class is the so called 'IStrategy' within the Strategy-Pattern.
