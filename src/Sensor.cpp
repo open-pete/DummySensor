@@ -14,7 +14,8 @@
  * readSensor() reads the sensor, which was set by setSensorType and returns the
  * current measurement-value as a double.
  * In practice readSensor does not really read the sensor, but it delegates the
- * measuring to implementation of SensorType-interface.
+ * measuring to the implementation of the SensorType-interface.
+ *
  * @return returns the current measurement-value as a double
  */
 DataBuffer Sensor::readSensor() {

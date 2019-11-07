@@ -14,6 +14,9 @@
 #include "DummySensor.h"
 
 TEST_CASE("test if DummySensor returns a value between 0 and 49") {
+    // randomize
+    srand(time(NULL));
+
     Sensor Sensor1;
     int minValue, maxValue;
     string name, dataSource;

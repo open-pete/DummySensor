@@ -14,9 +14,6 @@
  * @return a Databuffer which contains temperature value in degree celsius, measured by the temperature-sensor
  */
 DataBuffer DummySensor::readSensor() {
-    // randomize
-    srand(time(NULL));
-
     DataBuffer result;
     result.dataSource = "WeatherStation";
     result.useDataSource = true;
