@@ -42,10 +42,10 @@ make
 ### v1.1.0 Dummy Sensor
 - [x] returning dummy values
 - [x] storing time of readSensor
-- [ ] well documented
-- [ ] coverage report working
-- [ ] well tested
-- [ ] two readSensor implementations possible dummy-values for testing, real hardware implementation (depending on a variable during compile-time)
+- [x] documentation
+- [x] coverage report working
+- [x] test-cases for dummy sensor
+- [x] two readSensor implementations possible dummy-values for testing, real hardware implementation (depending on a variable during compile-time)
 - [ ] more then one value possible (for multi-sensors, or for sensors with more then one value (e.g. GPS) )
 
 ### v1.2.0 Dummy Implementation of 5-10 sensors

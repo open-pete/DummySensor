@@ -25,8 +25,12 @@
  */
 class SensorType {
     public:
-        SensorType() {};
+        /* --- constructor / destructor --- */
+        SensorType() {}
+
+        /* --- virtual readSensor function, to be implemeted by inheriting classes */
         virtual DataBuffer readSensor() = 0;
+
 };
 
 #endif // SENSORTYPE_H

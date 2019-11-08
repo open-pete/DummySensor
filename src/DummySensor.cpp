@@ -6,8 +6,8 @@
  * @version 1.0.0
  */
 
+#include "CompileTimeOptions.h"
 #include "DummySensor.h"
-
 
 /**
  * DummySensor::readSensor
@@ -17,9 +17,16 @@
 DataBuffer DummySensor::readSensor() {
     DataBuffer result;
 
-    result.dataSource = "WeatherStation";
+    result.dataSource = "Sensor";
     result.useDataSource = true;
+
+    #ifdef DUMMY_VALUES
     result.data[name] = (rand() % (maxValue+1)) + minValue;
+    #elif defined REAL_VALUES
+      // do some hardware magic
+      result.data[name] = 42;
+    #endif
 
     return result;
+
 }

@@ -4,7 +4,7 @@
  *          constant map possibleBufferValues
  *
  * @author mezorian
- * @version 1.0
+ * @version 1.0.0
  */
 
 #ifndef DATABUFFER_H

@@ -7,19 +7,20 @@
  */
 
 #define CATCH_CONFIG_MAIN  // This tells Catch to provide a main() - only do this in one cpp file
+
 #include "catch.hpp"
 #include <iostream>
 
 #include "Sensor.h"
 #include "DummySensor.h"
 
-TEST_CASE("test if DummySensor returns a value between 0 and 49") {
+TEST_CASE("test if DummySensor returns values in the previously defined range") {
     // randomize
     srand(time(NULL));
 
     Sensor Sensor1;
-    int minValue, maxValue;
-    string name, dataSource;
+    int minValue=0, maxValue=0;
+    string name="", dataSource="";
 
     SECTION("Test for temperature sensor") {
         minValue = -50;
@@ -50,14 +51,20 @@ TEST_CASE("test if DummySensor returns a value between 0 and 49") {
     }
 
     for (int i=0; i<100; i++) {
-        Sensor1.setSensorType(new DummySensor(minValue, maxValue, name, dataSource));
+        // create dummy Sensor
         std::cout << "created " << name <<  " sensor " << endl;
+        Sensor1.setSensorType(new DummySensor(minValue, maxValue, name, dataSource));
+
+        // read value from dummy sensor
         DataBuffer result = Sensor1.readSensor();
         std::cout << "DummySensor.read == " << result << endl;
-        REQUIRE(result.data[name] >= (double) minValue);
-        REQUIRE(result.data[name] <= (double) maxValue);
+
+        // check if value is in the expected range
+        REQUIRE(result.data[name] >= static_cast<double>(minValue) );
+        REQUIRE(result.data[name] <= static_cast<double>(maxValue) );
+
+        // check if startDateTime is the current UTC time
         DateTimePP dt;
-        dt.now(true);
         REQUIRE(result.startDateTime == dt.now(true));
     }
 

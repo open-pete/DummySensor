@@ -28,11 +28,11 @@ class Sensor {
     public:
         /* --- constructor --- */
         Sensor(bool setDateTimeDuringReadSensor_ = true) :
-            setDateTimeDuringReadSensor(setDateTimeDuringReadSensor_) {};
+            setDateTimeDuringReadSensor(setDateTimeDuringReadSensor_) {}
 
         /* --- getter and setter --- */
-        void setSensorType(SensorType *val_) { sensorType = val_; };
-        SensorType* getSensorType()          { return sensorType; };
+        void setSensorType(SensorType *val_) { sensorType = val_; }
+        SensorType* getSensorType()          { return sensorType; }
 
         /* --- measuring --- */
         DataBuffer readSensor();
