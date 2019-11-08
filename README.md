@@ -37,3 +37,21 @@ make
 
 ```
 
+## Roadmap
+
+### v1.1.0 Dummy Sensor
+- [x] returning dummy values
+- [x] storing time of readSensor
+- [ ] well documented
+- [ ] tested
+- [ ] two readSensor implementations possible dummy-values for testing, real hardware implementation (depending on a variable during compile-time)
+- [ ] more then one value possible (for multi-sensors, or for sensors with more then one value (e.g. GPS) )
+
+### v1.2.0 Dummy Implementation of 5-10 sensors
+- [ ] GPS
+- [ ] Power consumption / current / voltage
+- [ ] Relais Status
+- [ ] Battery Status / voltage
+- [ ] Water Tank Status
+- [ ] Temperature
+- [ ] ...
