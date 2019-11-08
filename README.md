@@ -43,7 +43,8 @@ make
 - [x] returning dummy values
 - [x] storing time of readSensor
 - [ ] well documented
-- [ ] tested
+- [ ] coverage report working
+- [ ] well tested
 - [ ] two readSensor implementations possible dummy-values for testing, real hardware implementation (depending on a variable during compile-time)
 - [ ] more then one value possible (for multi-sensors, or for sensors with more then one value (e.g. GPS) )
 
