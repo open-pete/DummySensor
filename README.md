@@ -46,7 +46,7 @@ make
 - [x] coverage report working
 - [x] test-cases for dummy sensor
 - [x] two readSensor implementations possible dummy-values for testing, real hardware implementation (depending on a variable during compile-time)
-- [ ] more then one value possible (for multi-sensors, or for sensors with more then one value (e.g. GPS) )
+- [x] more then one value possible (for multi-sensors, or for sensors with more then one value (e.g. GPS) )
 
 ### v1.2.0 Dummy Implementation of 5-10 sensors
 - [ ] GPS
