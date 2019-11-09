@@ -50,6 +50,13 @@ TEST_CASE("test if DummySensor returns values in the previously defined range") 
         dataSource = "Sensor";
     }
 
+    SECTION("Test for GPS sensor / sensor with more than one return value") {
+        minValue = 0;
+        maxValue = 360;
+        name = "GPS";
+        dataSource = "Sensor";
+    }
+
     for (int i=0; i<100; i++) {
         // create dummy Sensor
         std::cout << "created " << name <<  " sensor " << endl;
@@ -57,11 +64,20 @@ TEST_CASE("test if DummySensor returns values in the previously defined range") 
 
         // read value from dummy sensor
         DataBuffer result = Sensor1.readSensor();
-        std::cout << "DummySensor.read == " << result << endl;
 
         // check if value is in the expected range
-        REQUIRE(result.data[name] >= static_cast<double>(minValue) );
-        REQUIRE(result.data[name] <= static_cast<double>(maxValue) );
+        if (name == "GPS") {
+            REQUIRE(result.data["GPS_Longitude"] >= static_cast<double>(minValue) );
+            REQUIRE(result.data["GPS_Longitude"] <= static_cast<double>(maxValue) );
+            REQUIRE(result.data["GPS_Latitude"] >= static_cast<double>(minValue) );
+            REQUIRE(result.data["GPS_Latitude"] <= static_cast<double>(maxValue) );
+
+        } else {
+            REQUIRE(result.data[name] >= static_cast<double>(minValue) );
+            REQUIRE(result.data[name] <= static_cast<double>(maxValue) );
+        }
+
+        std::cout << "DummySensor.read == " << result << endl;
 
         // check if startDateTime is the current UTC time
         DateTimePP dt;

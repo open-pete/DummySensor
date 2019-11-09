@@ -21,7 +21,15 @@ DataBuffer DummySensor::readSensor() {
     result.useDataSource = true;
 
     #ifdef DUMMY_VALUES
-    result.data[name] = (rand() % (maxValue+1)) + minValue;
+
+
+    if (name == "GPS") {
+        result.data["GPS_Longitute"] = (rand() % (maxValue+1)) + minValue;
+        result.data["GPS_Latitute"] = (rand() % (maxValue+1)) + minValue;
+    } else {
+        result.data[name] = (rand() % (maxValue+1)) + minValue;
+    }
+
     #elif defined REAL_VALUES
       // do some hardware magic
       result.data[name] = 42;
