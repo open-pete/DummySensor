@@ -24,8 +24,8 @@ DataBuffer DummySensor::readSensor() {
 
 
     if (name == "GPS") {
-        result.data["GPS_Longitute"] = (rand() % (maxValue+1)) + minValue;
-        result.data["GPS_Latitute"] = (rand() % (maxValue+1)) + minValue;
+        result.data["GPS_Longitude"] = (rand() % (maxValue+1)) + minValue;
+        result.data["GPS_Latitude"] = (rand() % (maxValue+1)) + minValue;
     } else {
         result.data[name] = (rand() % (maxValue+1)) + minValue;
     }

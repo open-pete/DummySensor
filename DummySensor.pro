@@ -28,7 +28,8 @@ SOURCES += \
         src/DataBuffer.cpp \
         src/DummySensor.cpp \
         src/Sensor.cpp \
-        test/DummySensorTest.cpp
+        test/DummySensorTest.cpp \
+        test/MainTestFile.cpp
 
 INCLUDEPATH += include/ \
                mezorian/DateTimePP/include/
