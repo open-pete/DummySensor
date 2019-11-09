@@ -4,6 +4,7 @@
  *          constant map possibleBufferValues
  *
  * @author mezorian
+ * @version 1.0.0
  */
 
 #ifndef DATABUFFER_H
@@ -13,6 +14,8 @@
 #include <string>
 #include <iostream>
 #include <time.h>
+
+#include "DateTimePP.h"
 
 using namespace std;
 
@@ -26,8 +29,8 @@ using namespace std;
 struct DataBuffer{
     // dateTimes;
     bool useDateTimes = false;
-    struct tm startDateTime;
-    struct tm endDateTime;
+    DateTimePP startDateTime;
+    DateTimePP endDateTime;
 
     // data-source
     string dataSource;

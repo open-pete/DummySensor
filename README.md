@@ -1,7 +1,7 @@
-# DummySensor
-A C++ implementation of a SensorClass which reads no real values from sensors but outputs dummy-data
+# Sensor++
+Sensor++ is a C++ implementation for interfacing different kinds of sensors. The design is based on the strategy-design-pattern. 
 
-[![Build Status](https://travis-ci.org/open-pete/DummySensor.svg?branch=development)](https://travis-ci.org/open-pete/DummySensor) [![Coverage Status](https://coveralls.io/repos/github/open-pete/DummySensor/badge.svg?branch=development)](https://coveralls.io/github/open-pete/DummySensor?branch=development)
+[![Build Status](https://travis-ci.org/open-pete/SensorPP.svg?branch=development)](https://travis-ci.org/open-pete/SensorPP) [![Coverage Status](https://coveralls.io/repos/github/open-pete/SensorPP/badge.svg?branch=development)](https://coveralls.io/github/open-pete/SensorPP?branch=development)
 
 ## Requirements 
 
@@ -12,8 +12,8 @@ A C++ implementation of a SensorClass which reads no real values from sensors bu
 
 ```bash
 # set variables
-repoName="DummySensor"
-repoURL="https://github.com/open-pete/DummySensor.git"
+repoName="SensorPP"
+repoURL="https://github.com/open-pete/SensorPP.git"
 branch="master"
 manifest="default.xml"
 
@@ -33,7 +33,27 @@ make clean
 make
 
 # run
-./DummySensor
+./SensorPP
 
 ```
 
+## Roadmap
+
+### v1.1.0 Dummy Sensor
+- [x] returning dummy values
+- [x] storing time of readSensor
+- [x] documentation
+- [x] coverage report working
+- [x] test-cases for dummy sensor
+- [x] two readSensor implementations possible dummy-values for testing, real hardware implementation (depending on a variable during compile-time)
+- [x] more then one value possible (for multi-sensors, or for sensors with more then one value (e.g. GPS) )
+- [x] rename repo to SensorPP
+
+### v1.2.0 Dummy Implementation of 5-10 sensors
+- [ ] GPS
+- [ ] Power consumption / current / voltage
+- [ ] Relais Status
+- [ ] Battery Status / voltage
+- [ ] Water Tank Status
+- [ ] Temperature
+- [ ] ...

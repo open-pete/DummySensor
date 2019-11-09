@@ -3,6 +3,7 @@
  * Purpose: defines class Sensor
  *
  * @author mezorian
+ * @version 1.0.0
  */
 
 #ifndef SENSOR_H
@@ -26,17 +27,19 @@
 class Sensor {
     public:
         /* --- constructor --- */
-        Sensor() {};
+        Sensor(bool setDateTimeDuringReadSensor_ = true) :
+            setDateTimeDuringReadSensor(setDateTimeDuringReadSensor_) {}
 
         /* --- getter and setter --- */
-        void setSensorType(SensorType *val_) { sensorType = val_; };
-        SensorType* getSensorType()          { return sensorType; };
+        void setSensorType(SensorType *val_) { sensorType = val_; }
+        SensorType* getSensorType()          { return sensorType; }
 
         /* --- measuring --- */
         DataBuffer readSensor();
 
     private:
         SensorType *sensorType;
+        bool setDateTimeDuringReadSensor;
 };
 
 #endif // SENSOR_H

@@ -3,6 +3,7 @@
  * Purpose: defines class DummySensor
  *
  * @author mezorian
+ * @version 1.0.0
  */
 
 
@@ -22,24 +23,24 @@ using namespace std;
 
 /**
  * DummySensor class
- * @brief The DummySensor class provides an implementation of readSensor() for the Sensor TODO Dummy
+ * @brief The DummySensor class provides an implementation of readSensor() for the Sensor Dummy
  * The DummySensor class is an implementation of the interface SensorType and implements the function readSensor().
  * The design of it is based on the design pattern 'strategy'.
  * In respect of this the DummySensor-class is a so called 'ConcreteStrategy' within the Strategy-Pattern.
  */
 class DummySensor : public SensorType {
     public:
-        /* --- constructor --- */
+        /* --- constructor / destructor --- */
         DummySensor(int minValue_, int maxValue_, string name_, string dataSource_) :
             minValue(minValue_), maxValue(maxValue_),
-            name(name_), dataSource(dataSource_) {};
+            name(name_), dataSource(dataSource_) {}
 
         /* --- measuring --- */
         DataBuffer readSensor();
 
     private:
-        int maxValue;
         int minValue;
+        int maxValue;
         string name;
         string dataSource;
 };
