@@ -50,6 +50,7 @@ HEADERS += \
     include/DataBuffer.h \
     include/DummySensor.h \
     include/DummyValueStorage.h \
+    include/NEO_6M_GPS_Sensor.h \
     include/Sensor.h \
     include/SensorType.h \
     mezorian/DateTimePP/include/DateTimePP.h \
