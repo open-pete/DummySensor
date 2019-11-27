@@ -25,14 +25,19 @@ SOURCES += \
         mezorian/DateTimePP/src/DateTimePPGeneralMisc.cpp \
         mezorian/DateTimePP/src/DateTimePPOperator.cpp \
         mezorian/DateTimePP/src/DateTimePPUnixTime.cpp \
+        mezorian/HRand/src/HRand.cpp \
+        src/ACS712_Current_Sensor.cpp \
         src/DataBuffer.cpp \
         src/DummySensor.cpp \
+        src/DummyValueStorage.cpp \
         src/Sensor.cpp \
+        test/ACS712_Current_SensorTest.cpp \
         test/DummySensorTest.cpp \
         test/MainTestFile.cpp
 
 INCLUDEPATH += include/ \
-               mezorian/DateTimePP/include/
+               mezorian/DateTimePP/include/ \
+               mezorian/HRand/include/
 
 
 # Default rules for deployment.
@@ -41,10 +46,13 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
 
 HEADERS += \
+    include/ACS712_Current_Sensor.h \
     include/CompileTimeOptions.h \
     include/DataBuffer.h \
     include/DummySensor.h \
+    include/DummyValueStorage.h \
     include/Sensor.h \
     include/SensorType.h \
     mezorian/DateTimePP/include/DateTimePP.h \
+    mezorian/HRand/include/HRand.h \
     test/catch.hpp
