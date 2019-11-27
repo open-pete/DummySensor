@@ -31,10 +31,12 @@ SOURCES += \
         src/DummySensor.cpp \
         src/NEO_6M_GPS_Sensor.cpp \
         src/Sensor.cpp \
+        src/WaterTank_Status_Sensor.cpp \
         test/ACS712_Current_SensorTest.cpp \
         test/DummySensorTest.cpp \
         test/MainTestFile.cpp \
-        test/NEO_6M_GPS_SensorTest.cpp
+        test/NEO_6M_GPS_SensorTest.cpp \
+        test/WaterTank_Status_SensorTest.cpp
 
 INCLUDEPATH += include/ \
                mezorian/DateTimePP/include/ \
@@ -55,6 +57,7 @@ HEADERS += \
     include/NEO_6M_GPS_Sensor.h \
     include/Sensor.h \
     include/SensorType.h \
+    include/WaterTank_Status_Sensor.h \
     mezorian/DateTimePP/include/DateTimePP.h \
     mezorian/HRand/include/HRand.h \
     test/catch.hpp

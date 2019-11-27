@@ -23,6 +23,11 @@ ACS712_Current_Sensor::ACS712_Current_Sensor(const std::string &name_)
     #endif
 }
 
+/**
+ * ACS712_Current_Sensor::readSensor
+ * @brief
+ * @return
+ */
 DataBuffer ACS712_Current_Sensor::readSensor() {
     DataBuffer result;
 
