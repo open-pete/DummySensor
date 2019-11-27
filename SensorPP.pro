@@ -29,7 +29,6 @@ SOURCES += \
         src/ACS712_Current_Sensor.cpp \
         src/DataBuffer.cpp \
         src/DummySensor.cpp \
-        src/DummyValueStorage.cpp \
         src/Sensor.cpp \
         test/ACS712_Current_SensorTest.cpp \
         test/DummySensorTest.cpp \

@@ -19,7 +19,7 @@ TEST_CASE("test if ACS712_Current_Sensor returns values in the previously define
     string name="", dataSource="";
 
     SECTION("Test for temperature sensor") {
-        minValue = -30.0;
+        minValue = 0.0;
         maxValue = 30.0;
         name = "ACS712_Current_Sensor";
         dataSource = "Sensor";
@@ -35,10 +35,10 @@ TEST_CASE("test if ACS712_Current_Sensor returns values in the previously define
         DataBuffer result = Sensor1.readSensor();
 
         // check if value is in the expected range
-
         REQUIRE(result.data[name] >= minValue );
         REQUIRE(result.data[name] <= maxValue );
 
+        // output measured value
         std::cout << "ACS712_Current_Sensor.read == " << result << endl;
 
         // check if startDateTime is the current UTC time

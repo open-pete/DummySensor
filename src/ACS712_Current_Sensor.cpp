@@ -11,8 +11,8 @@
 
 /**
  * ACS712_Current_Sensor::readSensor
- * @brief readSensor() returns the current temperature measured by the temperature-sensor
- * @return a Databuffer which contains temperature value in degree celsius, measured by the temperature-sensor
+ * @brief readSensor() returns the current "current" in [Ampere] measured by the ACS712_Current_Sensor
+ * @return a Databuffer which contains the current value in ampere, measured by the ACS712_Current_Sensor
  */
 ACS712_Current_Sensor::ACS712_Current_Sensor(const std::string &name_)
     : name(name_) {
