@@ -20,6 +20,7 @@
 /**
  * NEO_6M_GPS_Sensor class
  * @brief The NEO_6M_GPS_Sensor class provides an implementation of readSensor() for the Sensor NEO_6M_GPS_Sensor
+ *
  * The NEO_6M_GPS_Sensor class is an implementation of the interface SensorType and implements the function readSensor().
  * The design of it is based on the design pattern 'strategy'.
  * In respect of this the NEO_6M_GPS_Sensor-class is a so called 'ConcreteStrategy' within the Strategy-Pattern.

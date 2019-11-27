@@ -50,7 +50,7 @@ make
 - [x] rename repo to SensorPP
 
 ### v1.2.0 Dummy Implementation of 5-10 sensors
-- [ ] GPS
+- [x] GPS
 - [x] Power consumption / current / voltage
 - [ ] Relais Status
 - [ ] Battery Status / voltage

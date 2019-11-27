@@ -29,10 +29,12 @@ SOURCES += \
         src/ACS712_Current_Sensor.cpp \
         src/DataBuffer.cpp \
         src/DummySensor.cpp \
+        src/NEO_6M_GPS_Sensor.cpp \
         src/Sensor.cpp \
         test/ACS712_Current_SensorTest.cpp \
         test/DummySensorTest.cpp \
-        test/MainTestFile.cpp
+        test/MainTestFile.cpp \
+        test/NEO_6M_GPS_SensorTest.cpp
 
 INCLUDEPATH += include/ \
                mezorian/DateTimePP/include/ \
