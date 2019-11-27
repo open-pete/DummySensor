@@ -4,4 +4,5 @@
 	<remote  name="github" fetch="https://github.com" />
 	<default revision="refs/heads/master" remote="github" sync-j="4" />
 	<project name="mezorian/DateTimePP" remote="github" revision="refs/tags/v1.1.0" />
+	<project name="mezorian/HRand" remote="github" revision="refs/tags/v1.0.0" />
 </manifest>
