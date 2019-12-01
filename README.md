@@ -53,7 +53,7 @@ make
 - [x] GPS
 - [x] Power consumption / current / voltage
 - [ ] Relais Status
-- [ ] Battery Status / voltage
-- [ ] Water Tank Status
-- [ ] Temperature
+- [x] Battery Status / voltage
+- [x] Water Tank Status
+- [ ] Temperature / Weather Sensor
 - [ ] ...

@@ -1,6 +1,6 @@
 /**
- * WaterTank_Status_SensorTest.cpp
- * Purpose: implements tests for class WaterTank_Status_Sensor
+ * Battery_Status_SensorTest.cpp
+ * Purpose: implements tests for class Battery_Status_Sensor
  *
  * @author mezorian
  * @version 1.0.0
@@ -10,24 +10,24 @@
 #include <iostream>
 
 #include "Sensor.h"
-#include "WaterTank_Status_Sensor.h"
+#include "Battery_Status_Sensor.h"
 
-TEST_CASE("test if WaterTank_Status_Sensor returns values in the previously defined range") {
+TEST_CASE("test if Battery_Status_Sensor returns values in the previously defined range") {
 
     Sensor Sensor1;
     double minValue=0.0, maxValue=0.0;
     string name="", dataSource="";
 
-    SECTION("Test for WaterTank_Status_Sensor") {
-        minValue = 0.0;
+    SECTION("Test for Battery_Status_Sensor") {
+        minValue = 45.0;
         maxValue = 100.0;
-        name = "WaterTank_Status_Sensor";
+        name = "Battery_Status_Sensor";
         dataSource = "Sensor";
     }
 
-    // create WaterTank_Status_Sensor
-    std::cout << "created WaterTank_Status_Sensor sensor " << endl;
-    Sensor1.setSensorType(new WaterTank_Status_Sensor);
+    // create Battery_Status_Sensor
+    std::cout << "created Battery_Status_Sensor sensor " << endl;
+    Sensor1.setSensorType(new Battery_Status_Sensor);
 
     for (int i=0; i<100; i++) {
 
@@ -39,7 +39,7 @@ TEST_CASE("test if WaterTank_Status_Sensor returns values in the previously defi
         REQUIRE(result.data[name] <= maxValue );
 
         // output measured value
-        std::cout << "WaterTank_Status_Sensor.read == " << result << endl;
+        std::cout << "Battery_Status_Sensor.read == " << result << endl;
 
         // check if startDateTime is the current UTC time
         DateTimePP dt;
