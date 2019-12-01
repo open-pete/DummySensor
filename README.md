@@ -52,8 +52,12 @@ make
 ### v1.2.0 Dummy Implementation of 5-10 sensors
 - [x] GPS
 - [x] Power consumption / current / voltage
-- [ ] Relais Status
+- [x] Relais Status
 - [x] Battery Status / voltage
 - [x] Water Tank Status
 - [x] Temperature / Weather Sensor
-- [ ] ...
+
+### v1.3.0 refactoring
+- [ ] bring code-coverage to > 80%
+- [ ] refactor code regarding style-guide
+- [ ] add more documentation in cpp files
