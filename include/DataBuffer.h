@@ -43,8 +43,6 @@ struct DataBuffer{
     bool operator== (DataBuffer& other_);
     friend ostream& operator<<(ostream& oStream_,DataBuffer dataBuffer_);
 
-    // miscellaneous
-    bool compareCTimeEqual(struct tm time1_, struct tm time2_) ;
 };
 
 /**
