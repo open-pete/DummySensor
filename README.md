@@ -55,5 +55,5 @@ make
 - [ ] Relais Status
 - [x] Battery Status / voltage
 - [x] Water Tank Status
-- [ ] Temperature / Weather Sensor
+- [x] Temperature / Weather Sensor
 - [ ] ...
